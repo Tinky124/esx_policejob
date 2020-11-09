@@ -496,6 +496,8 @@ function OpenBodySearchMenu(player)
 			if data.current.value then
 				TriggerServerEvent('esx_policejob:confiscatePlayerItem', GetPlayerServerId(player), data.current.itemType, data.current.value, data.current.amount)
 				menu.close()
+				Wait(300)
+                OpenBodySearchMenu(player)
 			end
 		end, function(data, menu)
 			menu.close()
